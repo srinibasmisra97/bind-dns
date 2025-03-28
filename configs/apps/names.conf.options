@@ -1,0 +1,18 @@
+acl "apps" {
+  10.0.10.0/24;
+};
+
+options {
+  directory "/var/cache/bind/";
+
+  recursion yes;
+  allow-recursion { apps; };
+  listen-on { 10.0.0.3; };
+  allow-transfer { none; };
+  querylog yes;  
+  dnssec-validation no;
+
+  forwarders {
+    10.0.0.2;
+  };
+};

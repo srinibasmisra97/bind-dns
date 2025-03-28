@@ -1,0 +1,17 @@
+zone "infra.dns-demo.edu" {
+  type master;
+  file "/etc/bind/zones/db.infra.dns-demo.edu";
+};
+
+zone "20.0.10.in-addr.arpa" {
+  type master;
+  file "/etc/bind/zones/db.20.0.10.in-addr.arpa";
+};
+
+zone "0.10.in-addr.arpa" {
+  type forward;
+  forward only;
+  forwarders { 10.0.0.2; };
+};
+
+

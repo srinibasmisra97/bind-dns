@@ -1,0 +1,17 @@
+$TTL    604800
+@       IN      SOA     apps.dns-demo.edu. root.apps.dns-demo.edu. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+; NS record
+@       IN      NS      ns.apps.dns-demo.edu.
+;
+; A records
+ns      IN      A       10.0.0.3
+;
+; A records for hosts
+demo-app-vm1     IN      A       10.0.10.2
+demo-app-vm2     IN      A       10.0.10.3

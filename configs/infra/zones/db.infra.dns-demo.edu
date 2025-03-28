@@ -1,0 +1,17 @@
+$TTL    604800
+@       IN      SOA     infra.dns-demo.edu. root.infra.dns-demo.edu. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+; NS record
+@       IN      NS      ns.infra.dns-demo.edu.
+;
+; A records
+ns      IN      A       10.0.0.4
+;
+; A records for hosts
+demo-infra-vm1     IN      A       10.0.20.2
+demo-infra-vm2     IN      A       10.0.20.3

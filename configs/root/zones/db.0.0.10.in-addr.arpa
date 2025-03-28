@@ -1,0 +1,17 @@
+$TTL    604800
+@       IN      SOA     dns-demo.edu. root.dns-demo.edu. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+; Name server records
+@       IN      NS      ns.dns-demo.edu.
+apps    IN      NS      demo-dns-apps.dns-demo.edu.
+infra   IN      NS      demo-dns-infra.dns-demo.edu.
+; PTR records
+2       IN      PTR     ns.dns-demo.edu.
+3       IN      PTR     demo-dns-apps.dns-demo.edu
+4       IN      PTR     demo-dns-infra.dns-demo.edu
+
