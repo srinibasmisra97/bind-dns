@@ -1,5 +1,5 @@
 locals {
-  project = "gcp-secops-app-prj01"
+  project = "<insert project id here>"
   region  = "us-central1"
   zone    = "us-central1-f"
 
